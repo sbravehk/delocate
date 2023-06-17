@@ -318,6 +318,7 @@ def _tree_libs_from_libraries(
                 continue
             lib_dict.setdefault(depending_path, {})
             lib_dict[depending_path][library_path] = install_name
+            print("1111111111111111111111111 save depending_path:{}, library_path:{}, install_name:{} into lib_dict".format(depending_path, library_path, install_name))
 
     if missing_libs and not ignore_missing:
         # get_dependencies will already have logged details of missing
