@@ -141,12 +141,12 @@ def _analyze_tree_libs(
         r_ed_base = basename(required)
         if relpath(required, rp_root_path).startswith(".."):
             # Not local, plan to copy
-            if r_ed_base in copied_basenames:
-                print("222222222222222222222222222 r_ed_base:{}, required:{}, rp_root_path:{}".format(r_ed_base, required, rp_root_path))
-                raise DelocationError(
-                    "Already planning to copy library with same basename as: "
-                    + r_ed_base
-                )
+            #if r_ed_base in copied_basenames:
+            #    print("222222222222222222222222222 r_ed_base:{}, required:{}, rp_root_path:{}, if-condition:{}".format(r_ed_base, required, rp_root_path, relpath(required, rp_root_path)))
+            #    raise DelocationError(
+            #        "Already planning to copy library with same basename as: "
+            #        + r_ed_base
+            #    )
             if not exists(required):
                 raise DelocationError(
                     'library "{0}" does not exist'.format(required)
