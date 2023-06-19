@@ -649,11 +649,11 @@ def delocate_wheel(
             executable_path=executable_path,
             ignore_missing=ignore_missing,
         )
-        if copied_libs and lib_path_exists_before_delocate:
-            raise DelocationError(
-                "f{lib_path} already exists in wheel but need to copy "
-                + "; ".join(copied_libs)
-            )
+        #if copied_libs and lib_path_exists_before_delocate:
+        #    raise DelocationError(
+        #        f"{lib_path} already exists in wheel but need to copy "
+        #        + "; ".join(copied_libs)
+        #    )
         if len(os.listdir(lib_path)) == 0:
             shutil.rmtree(lib_path)
         # Check architectures
